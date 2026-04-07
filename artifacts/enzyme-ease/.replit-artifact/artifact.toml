@@ -1,0 +1,31 @@
+kind = "web"
+previewPath = "/"
+title = "EnzymeEase Dehusking System"
+version = "1.0.0"
+id = "artifacts/enzyme-ease"
+router = "path"
+
+[[integratedSkills]]
+name = "react-vite"
+version = "1.0.0"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 21073
+
+[services.development]
+run = "pnpm --filter @workspace/enzyme-ease run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/enzyme-ease", "run", "build" ]
+publicDir = "artifacts/enzyme-ease/dist/public"
+serve = "static"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "21073"
+BASE_PATH = "/"

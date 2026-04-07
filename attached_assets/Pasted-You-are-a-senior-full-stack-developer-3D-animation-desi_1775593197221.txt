@@ -1,0 +1,221 @@
+You are a senior full-stack developer, 3D animation designer, and product strategist.
+
+Your task is to build a COMPLETE, production-ready solution for a dal mill optimization system called "EnzymeEase Dehusking System".
+
+This includes:
+
+1. A high-end interactive website (decision tool, not portfolio)
+2. A fully functional profit calculator
+3. A clean process simulation module
+4. A short cinematic 3D-style animation video (10–15 seconds)
+
+GOAL:
+Create something that looks and feels like a real industrial product demo that can convince mill owners and judges instantly.
+
+---
+
+## TECH STACK (WEBSITE)
+
+* React (Vite)
+* Tailwind CSS
+* Framer Motion (animations)
+* Three.js (lightweight 3D visuals)
+* Recharts or Chart.js (for graphs)
+
+---
+
+## DESIGN PRINCIPLES
+
+* Dark industrial theme (black/charcoal background)
+* Subtle glow accents (blue/green)
+* Smooth, premium animations (no lag)
+* Minimal text, high clarity
+* Must feel like a startup product, NOT a student project
+
+---
+
+## WEBSITE STRUCTURE
+
+1. HERO SECTION
+
+* Title: "Cut Dal Loss. Unlock Crores in Hidden Profit."
+* Subheading: Clear value proposition
+* 3D animated dal grain (husk separating subtly)
+* CTA: "Calculate Your Profit"
+
+---
+
+2. INTERACTIVE PROFIT CALCULATOR (CORE FEATURE)
+   Inputs:
+
+* Mill capacity (t/day)
+* Dal price (₹/kg)
+* Enzyme cost (₹ per 100 kg)
+
+Logic:
+
+* Base loss: 10 kg per 100 kg
+* Reduced loss: 4–5 kg per 100 kg (configurable)
+
+Outputs:
+
+* Current annual loss (₹)
+* New annual loss (₹)
+* Net annual profit increase (₹)
+* Payback period (months)
+
+Display:
+
+* Animated counters
+* Before vs After bar graph
+* Clean UI (no clutter)
+
+---
+
+3. PROCESS SIMULATION (INTERACTIVE)
+   Create a visual comparison:
+
+LEFT: Traditional
+
+* 3–4 passes
+* High breakage (particles, dust)
+
+RIGHT: EnzymeEase
+
+* 1–2 passes
+* Clean separation
+
+Options:
+
+* Slider comparison OR step-by-step animation
+* Use lightweight 3D or motion graphics
+
+---
+
+4. HOW IT WORKS (3 STEPS)
+
+* Enzyme pre-treatment
+* Controlled incubation
+* Reduced milling passes
+
+Use icons + motion animations
+
+---
+
+5. IMPLEMENTATION TIMELINE
+
+* 16-week rollout visual
+* Highlight:
+
+  * Pilot
+  * Validation
+  * Full rollout
+
+---
+
+6. COMPARISON TABLE
+   Compare:
+
+* Oil vs Steam vs Enzyme
+
+Include:
+
+* Cost
+* Efficiency
+* Risk
+* Scalability
+
+---
+
+7. TRUST SECTION
+
+* FSSAI-approved enzymes
+* Indian research backing (Dabhi et al.)
+* “Designed for mills like Lohia Industries”
+
+---
+
+8. FINAL CTA
+
+* "Run Your Numbers"
+* "Start Pilot in 4 Weeks"
+
+---
+
+## 3D SIMULATION VIDEO (IMPORTANT)
+
+Create a cinematic 10–15 second animation (MP4 or embeddable format).
+
+STYLE:
+
+* Dark industrial background
+* Clean, realistic visuals (NOT cartoonish)
+* Smooth transitions
+* Subtle glow effects
+
+SCENES:
+
+Scene 1 (0–4 sec) – Traditional Problem
+
+* Grains entering mill
+* 3–4 passes
+* Breakage into flour/dust
+* Text: "High Loss • Multiple Passes"
+
+Scene 2 (4–8 sec) – Enzyme Action
+
+* Zoom into grain layers
+* Show husk + cotyledon
+* Glowing enzyme particles breaking bond
+* Text: "Targeted Bond Breakdown"
+
+Scene 3 (8–12 sec) – Optimized Process
+
+* 1–2 passes
+* Clean husk removal
+* Intact dal
+* Text: "Low Loss • Higher Recovery"
+
+Scene 4 (12–15 sec) – Impact
+
+* Split screen comparison
+* Show:
+  "+50–60% Loss Reduction"
+  "+₹1 Cr+ Annual Impact (10 t/day mill)"
+
+REQUIREMENTS:
+
+* 1080p resolution
+* Smooth + loopable
+* No voiceover (text overlays only)
+* Keep it simple, clear, and professional
+
+---
+
+## PERFORMANCE RULES
+
+* Fast loading (no heavy assets)
+* Modular clean code
+* Fully responsive
+* Smooth UX
+
+---
+
+## OUTPUT REQUIRED
+
+1. Full React project code (ready to run)
+2. All components properly structured
+3. Working calculator logic
+4. Simulation module included
+5. Video file OR embedded animation section
+
+---
+
+## FINAL GOAL
+
+The output should make a judge say:
+
+"This is not a student submission. This is a deployable product."
+
+Prioritize:
+Clarity > Usability > Impact > Visual polish
