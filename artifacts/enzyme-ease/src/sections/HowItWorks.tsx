@@ -22,7 +22,7 @@ const steps = [
     title: "Controlled Incubation",
     subtitle: "4–8 Hour Rest Period",
     description:
-      "Treated grains rest in ambient conditions for 4–8 hours. During this time, enzymatic activity progressively weakens the fibrous matrix holding the husk to the cotyledon. Temperature and humidity are monitored for optimal reaction.",
+      "Treated grains rest in ambient conditions for 4–8 hours. During this time, enzymatic activity progressively weakens the fibrous matrix holding the husk to the cotyledon.",
     highlight: "Zero energy input during incubation.",
     icon: (
       <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -37,7 +37,7 @@ const steps = [
     title: "Reduced Milling Passes",
     subtitle: "1–2 Light Passes vs. 3–4 Traditional",
     description:
-      "With bonds already weakened, the milling machine requires only 1–2 light passes instead of 3–4 aggressive ones. The husk separates cleanly, the cotyledon remains intact, and total processing loss drops from ~10% to just 4–5%.",
+      "With bonds already weakened, the milling machine requires only 1–2 light passes instead of 3–4 aggressive ones.",
     highlight: "+50–60% loss reduction. Grade A recovery.",
     icon: (
       <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -53,99 +53,67 @@ export default function HowItWorks() {
   const [sectionRef, inView] = useIntersectionObserver(0.15);
 
   return (
-    <section
-      id="how-it-works"
-      ref={sectionRef}
-      className="py-24 px-6 bg-background relative"
-    >
-      <div
-        className="absolute top-0 left-0 right-0 h-px"
-        style={{ background: "linear-gradient(90deg, transparent, rgba(14,165,233,0.3), transparent)" }}
-      />
-
+    <section id="how-it-works" ref={sectionRef} className="py-24 px-6 bg-background relative">
       <div className="max-w-7xl mx-auto">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.7 }}
-          className="text-center mb-16"
-        >
-          <span className="text-xs font-semibold text-sky-400 tracking-widest uppercase">Mechanism</span>
-          <h2 className="mt-3 text-3xl sm:text-4xl font-black tracking-tight">How EnzymeEase Works</h2>
-          <p className="mt-3 text-muted-foreground max-w-lg mx-auto">
-            Three precise stages. No guesswork. Measurable results from day one.
-          </p>
-        </motion.div>
+        <div className="space-y-8 lg:grid lg:grid-cols-3 lg:gap-8">
+          {steps.map((step, i) => {
+            const colorMap = {
+              sky: {
+                border: "border-sky-500/30",
+                bg: "bg-sky-500/10",
+                text: "text-sky-400",
+                icon: "bg-sky-500/20 text-sky-400",
+                num: "text-sky-400/20",
+              },
+              purple: {
+                border: "border-purple-500/30",
+                bg: "bg-purple-500/10",
+                text: "text-purple-400",
+                icon: "bg-purple-500/20 text-purple-400",
+                num: "text-purple-400/20",
+              },
+              emerald: {
+                border: "border-emerald-500/30",
+                bg: "bg-emerald-500/10",
+                text: "text-emerald-400",
+                icon: "bg-emerald-500/20 text-emerald-400",
+                num: "text-emerald-400/20",
+              },
+            }[step.color] || {};
 
-        <div className="relative">
-          {/* Connector line */}
-          <div className="hidden lg:block absolute left-1/2 top-12 bottom-12 w-px timeline-connector opacity-20 -translate-x-1/2" />
+            return (
+              <motion.div
+                key={step.number}
+                initial={{ opacity: 0, y: 40 }}
+                animate={inView ? { opacity: 1, y: 0 } : {}}
+                transition={{ duration: 0.6, delay: i * 0.15 }}
+                className={`relative bg-card rounded-3xl border ${colorMap?.border || ""} p-8`}
+              >
+                <div className={`text-8xl ${colorMap?.num || ""}`}>
+                  {step.number}
+                </div>
 
-          <div className="space-y-8 lg:space-y-0 lg:grid lg:grid-cols-3 lg:gap-8">
-            {steps.map((step, i) => {
-              const colorMap = {
-                sky: {
-                  border: "border-sky-500/30",
-                  bg: "bg-sky-500/10",
-                  text: "text-sky-400",
-                  icon: "bg-sky-500/20 text-sky-400",
-                  num: "text-sky-400/20",
-                },
-                purple: {
-                  border: "border-purple-500/30",
-                  bg: "bg-purple-500/10",
-                  text: "text-purple-400",
-                  icon: "bg-purple-500/20 text-purple-400",
-                  num: "text-purple-400/20",
-                },
-                emerald: {
-                  border: "border-emerald-500/30",
-                  bg: "bg-emerald-500/10",
-                  text: "text-emerald-400",
-                  icon: "bg-emerald-500/20 text-emerald-400",
-                  num: "text-emerald-400/20",
-                },
-              }[step.color];
+                <div className={`w-14 h-14 ${colorMap?.icon || ""}`}>
+                  {step.icon}
+                </div>
 
-              return (
-                <motion.div
-                  key={step.number}
-                  initial={{ opacity: 0, y: 40 }}
-                  animate={inView ? { opacity: 1, y: 0 } : {}}
-                  transition={{ duration: 0.6, delay: i * 0.15 }}
-                  className={`relative bg-card rounded-3xl border ${colorMap.border} p-8 overflow-hidden`}
-                >
-                  {/* Big number background */}
-                  <div
-                    className={`absolute top-4 right-6 text-8xl font-black ${colorMap.num} select-none pointer-events-none`}
-                  >
-                    {step.number}
-                  </div>
+                <div className={`text-xs ${colorMap?.text || ""}`}>
+                  Stage {step.number}
+                </div>
 
-                  {/* Icon */}
-                  <div className={`w-14 h-14 rounded-2xl ${colorMap.icon} flex items-center justify-center mb-6`}>
-                    {step.icon}
-                  </div>
+                <h3>{step.title}</h3>
+                <p className={`${colorMap?.text || ""}`}>{step.subtitle}</p>
 
-                  {/* Content */}
-                  <div className={`text-xs font-semibold ${colorMap.text} uppercase tracking-widest mb-2`}>
-                    Stage {step.number}
-                  </div>
-                  <h3 className="text-xl font-bold text-white mb-1">{step.title}</h3>
-                  <p className={`text-sm ${colorMap.text} mb-4`}>{step.subtitle}</p>
-                  <p className="text-sm text-muted-foreground leading-relaxed mb-6">
-                    {step.description}
-                  </p>
+                <p>{step.description}</p>
 
-                  {/* Highlight pill */}
-                  <div className={`inline-flex items-center gap-2 px-4 py-2 rounded-full ${colorMap.bg} border ${colorMap.border}`}>
-                    <div className={`w-1.5 h-1.5 rounded-full ${colorMap.text.replace("text-", "bg-")}`} />
-                    <span className={`text-xs font-semibold ${colorMap.text}`}>{step.highlight}</span>
-                  </div>
-                </motion.div>
-              );
-            })}
-          </div>
+                <div className={`${colorMap?.bg || ""} ${colorMap?.border || ""}`}>
+                  <span className={`${colorMap?.text || ""}`}>
+                    {step.highlight}
+                  </span>
+                </div>
+              </motion.div>
+            );
+          })}
         </div>
       </div>
     </section>
