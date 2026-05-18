@@ -1,6 +1,6 @@
-🚀 EnzymeEase — Smart Asset Indicator & Process Optimization Platform
+ EnzymeEase — Smart Asset Indicator & Process Optimization Platform
 
-🧠 Overview : EnzymeEase is a data-driven web platform designed to simulate and optimize dal processing using enzyme-based pre-treatment. Built during a hackathon, it focuses on reducing processing losses, improving operational efficiency, and demonstrating real-world industrial impact through interactive simulations. It follows a modern AI-assisted development workflow, combining strong engineering fundamentals with rapid prototyping.
+ Overview : EnzymeEase is a data-driven web platform designed to simulate and optimize dal processing using enzyme-based pre-treatment. Built during a hackathon, it focuses on reducing processing losses, improving operational efficiency, and demonstrating real-world industrial impact through interactive simulations. It follows a modern AI-assisted development workflow, combining strong engineering fundamentals with rapid prototyping.
 
 ⚙️ Core Features
 
